@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "bin": "./bin/index.js",
   "scripts": {
-    "build": "npx esbuild --bundle --platform=node ./src/index.ts --external:esbuild --external:chokidar --outfile=./dist/index.js"
+    "build": "pnpx esbuild --bundle --platform=node ./src/index.ts --external:esbuild --external:chokidar --outfile=./dist/index.js"
   },
   "files": [
     "./bin/index.js",

@@ -38,7 +38,7 @@ const prepVercel = async () => {
   console.log("⚡️ Installing 'vercel' CLI...");
   console.log("⚡️");
 
-  const vercelBuild = spawn("npm", ["install", "-D", "vercel"]);
+  const vercelBuild = spawn("pnpm", ["install", "-D", "vercel"]);
 
   vercelBuild.stdout.on("data", (data) => {
     const lines: string[] = data.toString().split("\n");
@@ -66,16 +66,16 @@ const prepVercel = async () => {
 
   console.log("⚡️");
   console.log("⚡️");
-  console.log("⚡️ Completed 'npx vercel build'.");
+  console.log("⚡️ Completed 'pnpx vercel build'.");
   console.log("⚡️");
 };
 
 const buildVercel = async () => {
   console.log("⚡️");
-  console.log("⚡️ Building project with 'npx vercel build'...");
+  console.log("⚡️ Building project with 'pnpx vercel build'...");
   console.log("⚡️");
 
-  const vercelBuild = spawn("npx", ["vercel", "build"]);
+  const vercelBuild = spawn("pnpx", ["vercel", "build"]);
 
   vercelBuild.stdout.on("data", (data) => {
     const lines: string[] = data.toString().split("\n");
@@ -103,7 +103,7 @@ const buildVercel = async () => {
 
   console.log("⚡️");
   console.log("⚡️");
-  console.log("⚡️ Completed 'npx vercel build'.");
+  console.log("⚡️ Completed 'pnpx vercel build'.");
   console.log("⚡️");
 };
 
@@ -481,7 +481,7 @@ const transform = async ({
 
 const help = () => {
   console.log("⚡️");
-  console.log("⚡️ Usage: npx @cloudflare/next-to-pages [options]");
+  console.log("⚡️ Usage: pnpx @cloudflare/next-to-pages [options]");
   console.log("⚡️");
   console.log("⚡️ Options:");
   console.log("⚡️");
